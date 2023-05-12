@@ -1,0 +1,25 @@
+<section class="header">
+  <%= image_tag("micolet-logo.svg", alt: "micolet", class: "hola")%>
+  <span class="slogan">Almost new fashion with guarantee</span>
+</section>
+<section>
+  <div class="welcome">
+    <p class="text1">Welcome! Soon we will launch our site in this country.</p>
+    <p class="text2">Suscribe to recive our newsletter.</p>
+  </div>
+
+  <%= render 'shared/flash' %>
+  
+  <%= form_with url: '/newsletter/create', model: @newsletter, html: {class: 'form'} do |f| %>
+    <%= f.label 'Email' %>
+    <%= f.email_field :email, placeholder: 'example@example.com' %>
+    <%= f.label 'Preferences' %>
+    <% Newsletter::FASHION_INTEREST.each do |key| %>
+      <div>
+        <%= f.check_box :fashion_interest, {multiple: true}, key, nil %>
+        <%= f.label key %>
+      </div>
+    <% end %>
+    <%= f.submit 'Subscribe me!' %>
+  <%end%>
+</section>

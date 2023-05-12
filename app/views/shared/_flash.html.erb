@@ -1,0 +1,13 @@
+<% flash.each do |type, msg| %>
+  <% if type == 'success' %>
+    <div>
+      <%= msg %>
+    </div>
+  <% else %>
+    <ul>
+      <% msg.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>
