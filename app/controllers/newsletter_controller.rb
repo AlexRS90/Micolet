@@ -6,6 +6,7 @@ class NewsletterController < ApplicationController
   def create
     @newsletter = Newsletter.new(newsletter_params)
     if @newsletter.save
+      NewsletterMailer.newsletter_created.deliver_now
       flash[:success] = 'You were successfully added to ours newletter =D'
       redirect_to '/newsletter/new'
     else
