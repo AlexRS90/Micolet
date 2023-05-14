@@ -1,9 +1,9 @@
-<h1>Welcome to Micolet's Newsletter</h1>
+<h1><%= t 'mailer.welcome' %></h1>
 
 <p>
-  Hi <%= @mail %>, now we'll keep you up to date with the best topics related to: <%= @fashion_interest.to_sentence %>
+  <%= "#{t 'mailer.hi'} #{@mail}, #{t 'mailer.body'} #{@fashion_interest.to_sentence}" %>
 </p>
 
 <p>
-  Meanwhile, feel free to vist us in our website.
+  <%= t 'mailer.end' %>
 </p>

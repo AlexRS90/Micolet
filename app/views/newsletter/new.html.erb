@@ -1,25 +1,25 @@
 <section class="header">
   <%= image_tag("micolet-logo.svg", alt: "micolet", class: "hola")%>
-  <span class="slogan">Almost new fashion with guarantee</span>
+  <span class="slogan"><%= t 'static_pages.header.slogan' %></span>
 </section>
 <section>
   <div class="welcome">
-    <p class="text1">Welcome! Soon we will launch our site in this country.</p>
-    <p class="text2">Suscribe to recive our newsletter.</p>
+    <p class="text1"><%= t 'static_pages.new.welcome' %></p>
+    <p class="text2"><%= t 'static_pages.new.subscribe' %></p>
   </div>
 
   <%= render 'shared/flash' %>
-  
+
   <%= form_with url: '/newsletter/create', model: @newsletter, html: {class: 'form'} do |f| %>
-    <%= f.label 'Email' %>
-    <%= f.email_field :email, placeholder: 'example@example.com' %>
-    <%= f.label 'Preferences' %>
+    <%= f.label t 'static_pages.form.email' %>
+    <%= f.email_field :email, placeholder: I18n.translate('static_pages.form.example') %>
+    <%= f.label t 'static_pages.form.preferences' %>
     <% Newsletter::FASHION_INTEREST.each do |key| %>
       <div>
         <%= f.check_box :fashion_interest, {multiple: true}, key, nil %>
-        <%= f.label key %>
+        <%= f.label key.to_sentence %>
       </div>
     <% end %>
-    <%= f.submit 'Subscribe me!' %>
+    <%= f.submit t 'static_pages.form.subscribe' %>
   <%end%>
 </section>

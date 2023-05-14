@@ -8,6 +8,6 @@ class NewsletterMailer < ApplicationMailer
   def newsletter_created
     @mail = Newsletter.last.email
     @fashion_interest = Newsletter.last.fashion_interest
-    mail to: Newsletter.last.email, subject: "Welcome to Micolet's Newsletter"
+    mail to: @mail, subject: I18n.translate('mailer.subject')
   end
 end
