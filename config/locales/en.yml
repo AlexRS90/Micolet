@@ -22,7 +22,7 @@ en:
     user_new:
       personal_info: 'Personal Info'
   flash:
-    success: 'You were successfully added to ours newletter =D'
+    success: 'You were successfully added to ours newsletter =D'
   activerecord:
     errors:
       messages:

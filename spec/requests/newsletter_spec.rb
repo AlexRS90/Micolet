@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Newsletters", type: :request do
+RSpec.describe 'Newsletters', type: :request do
   it "Let's visit the new path" do
     get '/newsletter/new'
     expect(response.body).to include 'Suscribe to recive our newsletter.'
