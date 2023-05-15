@@ -1,33 +1,45 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   "true": "foo"
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  static_pages:
+    header:
+      slogan: 'Almost new fashion with guarantee'
+    new:
+      welcome: 'Welcome! Soon we will launch our site in this country.'
+      subscribe: 'Suscribe to recive our newsletter.'
+    form:
+      email: 'Email'
+      example: 'example@example.com'
+      preferences: 'Preferences'
+      subscribe: 'Subscribe me!'
+      name: 'Name'
+      lastname: 'Lastname'
+      phone: 'Phone number'
+      continue: 'Continue'
+    user_index:
+      offer: 'Would you like to get a 20% off code for your first purchase?'
+      description: 'Only have to complete the next 3 questions'
+      back_button: 'Go back'
+      code_button: 'Get my code'
+    user_new:
+      personal_info: 'Personal Info'
+  flash:
+    success: 'You were successfully added to ours newsletter =D'
+  activerecord:
+    errors:
+      messages:
+        email_unique: 'Sorry, this mail is already in our database.'
+        email_presence: 'Please add your email.'
+        email_api: 'Sorry, this is an invalid email, try a new one.'
+        fashion_interest: 'Please select at least one fashion option.'
+  mailer:
+    subject: "Welcome to Micolet's Newsletter"
+    welcome: "Welcome to Micolet's Newsletter"
+    hi: 'Hi'
+    body: "now we'll keep you up to date with the best topics related to:"
+    end: 'Meanwhile, feel free to vist us in our website.'
+    signature: "Micolet's team"
+  women_fashion:
+    - "Women's Fashion"
+  men_fashion:
+    - "Men's Fashion"
+  children_fashion:
+    - "Children's Fashion"

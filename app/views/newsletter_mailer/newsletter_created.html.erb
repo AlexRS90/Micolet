@@ -1,0 +1,9 @@
+<h1><%= t 'mailer.welcome' %></h1>
+
+<p>
+  <%= "#{t 'mailer.hi'} #{@mail}, #{t 'mailer.body'} #{@fashion_interest.to_sentence}" %>
+</p>
+
+<p>
+  <%= t 'mailer.end' %>
+</p>

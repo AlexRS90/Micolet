@@ -1,0 +1,21 @@
+<section>
+  <div class="welcome">
+    <p class="welcome_text"><%= t 'static_pages.new.welcome' %></p>
+    <p><%= t 'static_pages.new.subscribe' %></p>
+  </div>
+
+  
+  <%= form_with url: '/newsletter/create', model: @newsletter, html: {class: 'form'} do |f| %>
+    <%= render 'shared/flash' %>
+    <h4 class='form_label'><%= t 'static_pages.form.email' %></h4>
+    <%= f.email_field :email, placeholder: I18n.translate('static_pages.form.example'), class: 'text_field' %>
+    <h4 class='form_label'><%= t 'static_pages.form.preferences' %></h4>
+    <% Newsletter::FASHION_INTEREST.each do |key| %>
+      <div>
+        <%= f.check_box :fashion_interest, {multiple: true}, key, nil %>
+        <%= f.label key.to_sentence, class: '' %>
+      </div>
+    <% end %>
+    <%= f.submit I18n.translate('static_pages.form.subscribe'), class: 'primary_button' %>
+  <% end %>
+</section>

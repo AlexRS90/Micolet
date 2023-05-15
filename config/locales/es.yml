@@ -1,0 +1,45 @@
+es:
+  static_pages:
+    header:
+      slogan: 'Moda casi nueva con garantía'
+    new:
+      welcome: 'Bienvenido! Próximamente nuestro sitio estará disponible en éste país.'
+      subscribe: 'Suscríbete para recibir nuestra newsletter.'
+    form:
+      email: 'Correo electrónico'
+      example: 'ejemplo@ejemplo.com'
+      preferences: 'Preferencias'
+      subscribe: 'Subscribirme!'
+      name: 'Nombre'
+      lastname: 'Apellido'
+      phone: 'Número de teléfono'
+      continue: 'Continuar'
+    user_index:
+      offer: '¿Te gustaría obtener un cupón del 20% de descuento para tu primera compra?'
+      description: 'Solo responde 3 preguntas.'
+      back_button: 'Regresar'
+      code_button: 'Obtener mi cupón'
+    user_new:
+      personal_info: 'Información Personal'
+  flash:
+    success: 'Te has subscrito exitosamente a nuestra newsletter =D'
+  activerecord:
+    errors:
+      messages:
+        email_unique: 'Vaya, parece que este correo ya está en nuestra base de datos.'
+        email_presence: 'Por favor, escribe tu correo eletrónico.'
+        email_api: 'Vaya, parace que este correo electrónico no es válido, intenta con otro.'
+        fashion_interest: 'Elíge al menos una opción de moda.'
+  mailer:
+    subject: "Bienvenido a la Newsletter de Micolet!"
+    welcome: "Bienvenido a la Newsletter de Micolet!"
+    hi: 'Hola'
+    body: 'ahora te mantendremos al tanto con las mejores noticias sobre:'
+    end: 'Mientras tanto, visitanos en nuestra web.'
+    signature: "Equipo Micolet"
+  women_fashion:
+    - "Moda para Mujeres"
+  men_fashion:
+    - "Moda para Hombres"
+  children_fashion:
+    - "Moda para niños"
