@@ -1,0 +1,11 @@
+<section class='welcome'>
+  <%= render 'shared/flash' %>
+  <div class='welcome_text'>
+    <p><%= t 'static_pages.user_index.offer' %></p>
+    <p><%= t 'static_pages.user_index.description' %></p>
+  </div>
+  <div>
+  <%= link_to I18n.translate('static_pages.user_index.back_button'), newsletter_new_path, class: 'back_button' %>
+  <%= link_to I18n.translate('static_pages.user_index.code_button'), user_new_path, class: 'primary_button' %>
+  </div>
+</section>

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Newsletter, type: :model do
   it 'email and fashion interest must be present' do
-    newsletter = Newsletter.new(email: 'alex@alex.com', fashion_interest: ["Men's Fashion"])
+    newsletter = Newsletter.new(email: 'alex@gmail.com', fashion_interest: ["Men's Fashion"])
     expect(newsletter).to be_valid
   end
 
@@ -17,8 +17,8 @@ RSpec.describe Newsletter, type: :model do
   end
 
   it 'Email must be unique' do
-    newsletter = Newsletter.create!(email: 'alex@alex.com', fashion_interest: ["Men's Fashion"])
-    newsletter2 = Newsletter.new(email: 'alex@alex.com', fashion_interest: ["Men's Fashion"])
+    newsletter = Newsletter.create!(email: 'alex@gmail.com', fashion_interest: ["Men's Fashion"])
+    newsletter2 = Newsletter.new(email: 'alex@gmail.com', fashion_interest: ["Men's Fashion"])
     expect(newsletter2).to_not be_valid
   end
 end

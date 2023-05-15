@@ -1,10 +1,10 @@
 <% flash.each do |type, msg| %>
   <% if type == 'success' %>
-    <div>
+    <div class='flash_success'>
       <%= msg %>
     </div>
   <% else %>
-    <ul>
+    <ul class='flash_error'>
       <% msg.each do |error| %>
         <li><%= error %></li>
       <% end %>

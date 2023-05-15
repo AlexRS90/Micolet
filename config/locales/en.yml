@@ -10,6 +10,17 @@ en:
       example: 'example@example.com'
       preferences: 'Preferences'
       subscribe: 'Subscribe me!'
+      name: 'Name'
+      lastname: 'Lastname'
+      phone: 'Phone number'
+      continue: 'Continue'
+    user_index:
+      offer: 'Would you like to get a 20% off code for your first purchase?'
+      description: 'Only have to complete the next 3 questions'
+      back_button: 'Go back'
+      code_button: 'Get my code'
+    user_new:
+      personal_info: 'Personal Info'
   flash:
     success: 'You were successfully added to ours newletter =D'
   activerecord:

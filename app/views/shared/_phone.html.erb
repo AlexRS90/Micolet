@@ -1,0 +1,4 @@
+<div>
+  <h4 class='form_label'><%= f.label :phone, I18n.translate('static_pages.form.phone') %></h4>
+  <%= f.number_field :phone, max: 9999999999, min: 1000000000, class: 'text_field' %>
+</div>

@@ -10,6 +10,10 @@
   </head>
 
   <body>
+    <header class="header">
+      <%= image_tag("micolet-logo.svg", alt: "micolet")%>
+      <p class="slogan"><%= t 'static_pages.header.slogan' %></p>
+    </header>
     <%= yield %>
   </body>
 </html>

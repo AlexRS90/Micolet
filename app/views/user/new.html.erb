@@ -1,0 +1,9 @@
+<section class='welcome'>
+  <h2><%= t 'static_pages.user_new.personal_info' %></h2>
+  <%= form_with url: user_create_path, model: @user, html: {class: 'form'} do |f| %>
+    <%= render "shared/#{@user.current_step}", f: f %>
+    <div>
+      <%= f.submit t('static_pages.form.continue'), class: 'primary_button' %>
+    </div>
+  <% end %>
+</section>

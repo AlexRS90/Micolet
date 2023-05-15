@@ -2,6 +2,8 @@ require 'net/http'
 require 'net/https'
 
 class Newsletter < ApplicationRecord
+  has_one :user
+
   validates :email, uniqueness: { message: :email_unique }
   validates :email, presence: { message: :email_presence }
   validates :fashion_interest, presence: { message: :fashion_interest }
